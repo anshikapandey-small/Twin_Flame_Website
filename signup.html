@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UMBRA — Sign Up</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../CSS/login.css">
+</head>
+<body>
+
+<div class="stage" id="stage">
+  <div class="half half-left"></div>
+  <div class="half half-right"></div>
+  <div class="divider"></div>
+
+  <!-- Shopify note: replace this <form> action/method with
+       {{ routes.account_register_url }} and method="post" when converting to Liquid.
+       Field names below intentionally match Shopify's expected
+       "customer[first_name]", "customer[email]", "customer[password]" and
+       "customer[password_confirmation]" naming for a drop-in swap later. -->
+  <form class="login-box" id="loginBox">
+    <div class="login-logo">
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" stroke="#0a0a0a" stroke-width="1.4"/>
+        <path d="M20 4 C13 12 13 28 20 36 C27 28 27 12 20 4Z" fill="#0a0a0a"/>
+      </svg>
+      <span>Umbra</span>
+    </div>
+
+    <div class="login-fields">
+      <div class="field">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="customer[first_name]" placeholder="Jane Doe" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="customer[email]" placeholder="you@example.com" required>
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="customer[password]" placeholder="••••••••" required>
+      </div>
+      <div class="field">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="customer[password_confirmation]" placeholder="••••••••" required>
+      </div>
+    </div>
+
+    <div class="login-actions">
+      <button type="submit" class="btn btn-primary">Create Account</button>
+      <button type="button" class="btn btn-google">
+        <svg viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.9 32.6 29.4 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 15.9 19 13 24 13c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.4 0 10.3-2 14-5.4l-6.5-5.5C29.4 34.7 26.8 36 24 36c-5.3 0-9.8-3.4-11.4-8.1l-6.5 5C9.6 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-1 3-3.1 5.5-5.8 7.1l6.5 5.5C39.8 37.4 44 31.5 44 24c0-1.2-.1-2.4-.4-3.5z"/></svg>
+        Continue with Google
+      </button>
+    </div>
+
+    <p class="login-footer">Already have an account? <a href="login.html">Sign in.</a></p>
+  </form>
+</div>
+
+<script src="../JS/login.js"></script>
+</body>
+</html> 
