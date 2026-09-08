@@ -18,7 +18,7 @@ console.log("product.js loaded");
    to "detect" at that point — this trick is only needed for a plain
    static folder with no backend behind it.
    ========================================================================== */
-const IMAGE_FOLDER_PATH = "../media/product/figurines/kokoshibo/"; // <-- change this to your folder
+const IMAGE_FOLDER_PATH = "media/product/figurines/kokoshibo/"; // <-- change this to your folder
 const IMAGE_EXTENSIONS = ["jpg", "jpeg", "png", "webp"];
 const MAX_IMAGES_TO_CHECK = 20; // safety cap so it doesn't loop forever
 
