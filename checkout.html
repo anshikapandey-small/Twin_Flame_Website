@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UMBRA — Checkout</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="CSS/checkout.css">
+</head>
+<body>
+
+<nav class="nav">
+  <span class="brand">UMBRA</span>
+</nav>
+
+<main class="checkout">
+
+  <!-- LEFT: two-section form -->
+  <form class="checkout-form" id="checkoutForm">
+    <h1 class="checkout-title">Checkout</h1>
+    <p class="checkout-sub">Enter your details to complete the order.</p>
+
+    <div class="form-section">
+      <div class="form-section-title"><span class="num">1</span> Contact Details</div>
+      <div class="form-row">
+        <div class="field">
+          <label for="fullName">Name</label>
+          <input type="text" id="fullName" name="name" placeholder="Jane Doe" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label for="mobile">Mobile Number</label>
+          <input type="tel" id="mobile" name="mobile" placeholder="+91 98765 43210" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <div class="form-section-title"><span class="num">2</span> Shipping Address</div>
+      <div class="form-row">
+        <div class="field">
+          <label for="address">Address</label>
+          <input type="text" id="address" name="address" placeholder="House no., street, area" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label for="city">City</label>
+          <input type="text" id="city" name="city" placeholder="City" required>
+        </div>
+        <div class="field">
+          <label for="state">State</label>
+          <input type="text" id="state" name="state" placeholder="State" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label for="pincode">PIN Code</label>
+          <input type="text" id="pincode" name="pincode" placeholder="400001" required>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="place-order-btn">Place Order</button>
+  </form>
+
+  <!-- RIGHT: order summary -->
+  <div class="order-summary">
+    <div class="summary-item">
+      <div class="summary-thumb">
+        <img id="image0" src="media/product/figurines/kokoshibo/image0.jpg" alt="Product">
+        <!-- <span class="qty-badge" id="summaryQty"></span> -->
+      </div>
+      <div class="summary-info">
+        <div class="summary-name" id="summaryName">—</div>
+        <div class="summary-variant" id="summaryVariant">—</div>
+      </div>
+      <div class="summary-price" id="summaryPrice">—</div>
+    </div>
+
+    <div class="summary-divider"></div>
+
+    <div class="summary-line">
+      <span>Subtotal</span>
+      <span id="subtotalValue">—</span>
+    </div>
+    <div class="summary-line">
+      <span>Shipping</span>
+      <span id="shippingValue">—</span>
+    </div>
+    <div class="summary-line">
+      <span>GST</span>
+      <span id="gstValue">—</span>
+    </div>
+
+    <div class="summary-divider"></div>
+
+    <div class="summary-line total">
+      <span>Total</span>
+      <span id="totalValue">—</span>
+    </div>
+  </div>
+
+</main>
+
+<script src="JS/checkout.js"></script>
+</body>
+</html>

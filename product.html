@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UMBRA — Field Notes Tee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/product.css" />
+  </head>
+  <body>
+    <nav class="nav">
+  <span class="brand">UMBRA</span>
+  <div class="nav-right">
+    <div class="nav-icons">
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke-width="1.5"/><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6" stroke-width="1.5"/></svg>
+      <svg viewBox="0 0 24 24" fill="none"><path d="M6 9V7a6 6 0 1112 0v2M4 9h16l-1.2 12.1a2 2 0 01-2 1.9H7.2a2 2 0 01-2-1.9L4 9z" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    </div>
+    <a href="catalog.html" class="back-link">Back to catalog</a>
+  </div>
+</nav>
+
+    <main class="product">
+      <!-- DESKTOP GALLERY: vertical stack, scrolls with the page -->
+      <div class="gallery-desktop" id="galleryDesktop">
+        <!-- <img id="image0">, <img id="image1">... injected by product.js -->
+      </div>
+
+      <!-- MOBILE GALLERY: horizontal swipe with pagination pill -->
+      <div class="gallery-mobile">
+        <div class="scroller" id="galleryMobileScroller">
+          <!-- <img id="image0-mobile">, <img id="image1-mobile">... injected by product.js -->
+        </div>
+        <div class="pill" id="galleryPill">1 / 1</div>
+      </div>
+
+      <!-- INFO PANEL: stays fixed/sticky on desktop while gallery scrolls -->
+      <div class="info-panel">
+        <span class="info-tag">Figurine</span>
+        <h1 class="info-title">UpperMoon 1 - Kokoshibo</h1>
+        <div class="info-price">₹1,499 <span class="compare">₹1,899</span></div>
+
+        <div class="availability">
+          <span class="dot"></span>
+          In stock <span class="units">— 14 units left</span>
+        </div>
+
+        <div class="offers">
+          <div class="offer">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M20 6L9 17l-5-5"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            Buy 2, get 10% off — auto-applied at checkout
+          </div>
+          <div class="offer">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M20 6L9 17l-5-5"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            Free shipping on orders above ₹1,999
+          </div>
+          <div class="offer">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M20 6L9 17l-5-5"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            7-day easy returns
+          </div>
+        </div>
+
+        <p class="info-desc">
+          Kokushibo, Upper Rank One — six eyes that miss nothing,
+          a blade faster than thought. He doesn't fight; he unravels you.
+          Centuries of hunger wear a monk's calm. By the time you understand,
+          you're already gone.
+        </p>
+
+        <div class="buy-row">
+          <div class="qty">
+            <button id="qtyMinus" type="button">−</button>
+            <span id="qtyValue">1</span>
+            <button id="qtyPlus" type="button">+</button>
+          </div>
+          <button class="add-to-cart" type="button">Add to Cart</button>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="footer-logo">Umbra</span>
+        <p class="footer-about">
+          Umbra is an independent studio making objects worth keeping — shirts,
+          light, and small pieces built to outlast the season they were bought
+          in.
+        </p>
+      </div>
+
+      <div class="footer-policies">
+        <h4>Policies</h4>
+        <a href="#">Contact Us</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Refund Policy</a>
+        <a href="#">Shipping Policy</a>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Umbra. All rights reserved.</span>
+      </div>
+    </footer>
+    <script src="JS/product.js"></script>
+  </body>
+</html>
