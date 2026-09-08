@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UMBRA — Customize</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="CSS/customize.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="brand">
+    <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20" cy="20" r="19" stroke="#0a0a0a" stroke-width="1.4"/>
+      <path d="M20 4 C13 12 13 28 20 36 C27 28 27 12 20 4Z" fill="#0a0a0a"/>
+    </svg>
+    UMBRA
+  </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="#0a0a0a" stroke-width="1.6" stroke-linecap="round"/></svg>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a href="catalog.html#top">Home</a>
+    <a href="catalog.html#catalog">Catalog</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="customize.html" aria-current="page">Customize</a>
+  </div>
+  <div class="nav-icons">
+    <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke-width="1.5"/><path d="M21 21l-4.3-4.3" stroke-width="1.5" stroke-linecap="round"/></svg>
+    <svg viewBox="0 0 24 24" fill="none"><path d="M6 9V7a6 6 0 1112 0v2M4 9h16l-1.2 12.1a2 2 0 01-2 1.9H7.2a2 2 0 01-2-1.9L4 9z" stroke-width="1.5" stroke-linejoin="round"/></svg>
+  </div>
+</nav>
+
+<header class="cz-intro">
+  <p class="cz-kicker">Customize</p>
+  <h1>What's in your mind Today</h1>
+  <p class="cz-lede">Tell us what you're picturing and we'll help make it real — sketch, reference photo, or just a rough idea is enough to start.</p>
+</header>
+
+<main class="cz-form-wrap">
+  <form class="cz-form" id="czForm" novalidate>
+
+    <!-- 01 — CATEGORY -->
+    <section class="cz-step">
+      <div class="cz-step-head">
+        <span class="cz-step-index">01</span>
+        <h2 class="cz-step-title">Pick a category</h2>
+      </div>
+      <p class="cz-step-hint">Choose whichever comes closest — we'll fine-tune the details with you after.</p>
+      <div class="cz-pills" id="categoryPills" role="group" aria-label="Product category">
+        <button type="button" class="cz-pill" data-category="shirts">Shirts</button>
+        <button type="button" class="cz-pill" data-category="lamps">Lamps</button>
+        <button type="button" class="cz-pill" data-category="figurines">Figurines</button>
+        <button type="button" class="cz-pill" data-category="dwe">Daily Essentials</button>
+        <button type="button" class="cz-pill" data-category="other">Something else</button>
+      </div>
+      <input type="hidden" name="category" id="categoryInput">
+    </section>
+
+    <!-- 02 — SHARE YOUR IDEA -->
+    <section class="cz-step">
+      <div class="cz-step-head">
+        <span class="cz-step-index">02</span>
+        <h2 class="cz-step-title">Share your idea</h2>
+      </div>
+      <p class="cz-step-hint">A photo, a sketch, a screenshot of something you liked — anything visual helps.</p>
+
+      <div class="upload-zone" id="uploadZone" tabindex="0" role="button" aria-label="Upload an image of your idea">
+        <input type="file" id="fileInput" name="ideaImage" accept="image/*" hidden>
+
+        <div class="upload-empty" id="uploadEmpty">
+          <svg viewBox="0 0 24 24" fill="none" class="upload-icon"><path d="M12 16V4M12 4l-5 5M12 4l5 5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 16v3a2 2 0 002 2h12a2 2 0 002-2v-3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p>Drag an image here, or <span class="upload-browse">browse your files</span></p>
+          <span class="upload-hint">PNG or JPG, up to 10MB</span>
+        </div>
+
+        <div class="upload-preview hide" id="uploadPreview">
+          <img id="previewImg" alt="Your uploaded idea">
+          <div class="upload-preview-info">
+            <span id="previewName">image.jpg</span>
+            <button type="button" class="upload-remove" id="uploadRemove">Remove</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 — ARE YOU IN A HURRY -->
+    <section class="cz-step">
+      <div class="cz-step-head">
+        <span class="cz-step-index">03</span>
+        <h2 class="cz-step-title">Are you in a hurry?</h2>
+      </div>
+      <p class="cz-step-hint">Give us a rough timeline, or pick an exact date if you already have one in mind.</p>
+
+      <div class="hurry-track" id="hurryTrack">
+        <button type="button" class="hurry-pill" data-days="7">
+          <span class="hurry-pill-label">This week</span>
+          <span class="hurry-pill-sub">Rush</span>
+        </button>
+        <button type="button" class="hurry-pill" data-days="14">
+          <span class="hurry-pill-label">Two weeks</span>
+          <span class="hurry-pill-sub">Standard</span>
+        </button>
+        <button type="button" class="hurry-pill is-active" data-days="0">
+          <span class="hurry-pill-label">No rush</span>
+          <span class="hurry-pill-sub">Flexible</span>
+        </button>
+      </div>
+
+      <div class="hurry-date-row">
+        <label for="dueDate">Or choose an exact date</label>
+        <div class="hurry-date-field">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="5.5" width="17" height="15" rx="2.5" stroke-width="1.4"/><path d="M8 3.5v4M16 3.5v4M3.5 10h17" stroke-width="1.4" stroke-linecap="round"/></svg>
+          <input type="date" id="dueDate" name="dueDate">
+        </div>
+      </div>
+
+      <p class="hurry-readout" id="hurryReadout">Flexible — whenever it's ready.</p>
+    </section>
+
+    <!-- 04 — DESCRIPTION -->
+    <section class="cz-step">
+      <div class="cz-step-head">
+        <span class="cz-step-index">04</span>
+        <h2 class="cz-step-title">Share more about your idea</h2>
+      </div>
+      <p class="cz-step-hint">Sizes, colors, materials, inspiration, anything you want us to know.</p>
+      <textarea class="cz-textarea" id="ideaDetails" name="details" rows="6" placeholder="e.g. Oversized fit, faded black, a small moon graphic on the left chest, similar to your Ash Column Tee but longer..."></textarea>
+    </section>
+
+    <!-- SEND -->
+    <div class="cz-submit-row">
+      <button type="submit" class="send-btn" id="sendBtn">
+        <span class="send-label">Send request</span>
+        <span class="send-icon" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M21.5 2.5L2 10.9c-.6.26-.55 1.13.07 1.32l6.9 2.1 2.1 6.9c.19.62 1.06.67 1.32.07l8.4-19.5c.24-.55-.31-1.1-.86-.86l.57-.9-.57.9z"/><path d="M8.97 14.32L21.5 2.5l-9.9 15.15-.13-.4-2.5-2.93z" opacity="0.55"/></svg>
+</span>
+      </button>
+      <p class="send-confirm" id="sendConfirm" aria-live="polite"></p>
+    </div>
+
+  </form>
+</main>
+
+<footer>
+  <div class="foot-mark">
+    <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="#0a0a0a" stroke-width="1.4"/><path d="M20 4 C13 12 13 28 20 36 C27 28 27 12 20 4Z" fill="#0a0a0a"/></svg>
+    <span>Umbra</span>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Umbra. All rights reserved.</span>
+    <span>Terms &amp; Policies</span>
+  </div>
+</footer>
+
+<script src="JS/customize.js"></script>
+</body>
+</html>
